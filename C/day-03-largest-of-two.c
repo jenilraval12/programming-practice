@@ -1,24 +1,48 @@
-/*Problem Statement
+/*
+Day 3 - Find Largest and Smallest of Two Numbers
 
-Write a C program that accepts two integers from the user and determines which number is larger.
+Problem Statement
 
-Input
-Two integers entered by the user.
+Write a C program that accepts two integers from the user and determines
+the larger and smaller numbers.
 
-Output
-Print the larger number.
-If both numbers are equal, print that they are equal.
+Requirements
+- Accept two integer values from the user using scanf().
+- Compare the two numbers using conditional statements.
+- If the numbers are equal, display an appropriate message.
+- If the numbers are different, display both the larger and smaller values.
+- Use if, else if, and else statements.
+- Use comparison operators to determine the relationship between the numbers.
 
-Bonus Challenge ⭐
+Example 1
+Input:
+25
+17
 
-Also determine the smaller number.
+Output:
+Larger Number: 25
+Smaller Number: 17
 
-For example:
-Enter first number: 25
-Enter second number: 17
+Example 2
+Input:
+12
+30
 
-Larger number: 25
-Smaller number: 17*/
+Output:
+Larger Number: 30
+Smaller Number: 12
+
+Example 3
+Input:
+15
+15
+
+Output:
+Both Numbers Are Equal!!
+
+The program should correctly handle positive numbers, negative numbers,
+zero, and equal values.
+*/
 
 #include<stdio.h>
 
