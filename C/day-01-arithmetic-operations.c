@@ -1,26 +1,54 @@
-/*Day 1 – Problem 1
+/*
+Day 1 - Arithmetic Operations
+
 Problem Statement
+Write a C program that accepts two integers from the user and performs
+basic arithmetic operations on them.
 
-Write a C program to input two integers from the user and display:
+The program should calculate and display:
+1. Sum
+2. Difference
+3. Product
+4. Quotient
+5. Remainder
 
-1) Sum
-2) Difference
-3) Product
-4) Quotient
-5) Remainder
+Requirements
+- Accept two integer values from the user using scanf().
+- Perform all five arithmetic operations using arithmetic operators.
+- Display the results in a clearly formatted manner.
+- Check whether the second number is zero before performing division
+  and remainder operations.
+- If the second number is zero, display an appropriate error message
+  instead of performing division or remainder operations.
+- Use if-else statements for handling the division-by-zero condition.
 
-Input
-Two integers entered by the user.
+Example 1
+Input:
+15
+4
 
-Output
-Display all five arithmetic operations.
+Output:
+=========================
+Arithmetic Operations
+=========================
 
-Bonus Challenge ⭐
+Sum of 15 and 4 is: 19
+Difference of 15 and 4 is: 11
+Product of 15 and 4 is: 60
+Quotient of 15 and 4 is: 3
+Remainder of 15 and 4 is: 3
 
-Handle the case when the second number is 0.
-Instead of crashing or causing undefined behavior, print:
+Example 2
+Input:
+20
+0
 
-"Division by zero is not possible."*/
+Output:
+Error: Division by zero is not possible
+
+The program should correctly handle positive numbers, negative numbers,
+zero, and different combinations of integer values.
+*/
 
 #include <stdio.h>
 
