@@ -32,3 +32,44 @@ Output:
 
 The program should correctly handle leap years, non-leap years,
 century years, and invalid year values.*/
+
+#include <stdio.h>
+
+int main()
+{
+    int year, i;
+    printf("===================");
+    printf("\nLeap Year Checker");
+    printf("\n===================");
+
+    do
+    {
+        printf("\nEnter Year To Check: ");
+        scanf("%d", &year);
+        if (year >= 1000 && year <= 9999)
+        {
+            i = 0;
+        }
+        else
+        {
+            printf("Please Enter a Valid Year!\n");
+            i = 1;
+        }
+    } while (i == 1);
+
+    if(year%400==0)
+    {
+        printf("%d is A Leap Year",year);
+        printf("\nFebruary Month has 29 Days!!");
+    }
+    else if(year%4==0 && year%100!=0)
+    {
+        printf("%d is a Leap Year",year);
+        printf("\nFebruary Month has 29 Days!!");       
+    }
+    else{
+        printf("%d is NOT a Leap Year!",year);
+        printf("\nFebruary Month has 28 Days!!");
+    }
+    return 0;
+}
