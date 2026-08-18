@@ -60,14 +60,70 @@ Example:
 Sum of Even Numbers: 30
 Sum of Odd Numbers: 47
 
-Extra Challenge
-Determine and display the second largest number in the array.
-
-Example:
-Numbers: 12 7 25 10 8 15
-
-Largest Number: 25
-Second Largest Number: 15
-
 The program should correctly handle positive numbers, negative numbers,
 zero, duplicate values, even numbers, odd numbers, and decimal averages.*/
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+
+    do
+    {
+        printf("Enter Number of Integers: ");
+        scanf("%d", &n);
+
+        if (n <= 0)
+        {
+            printf("Please enter a number greater than 0.\n");
+        }
+    } while (n <= 0);
+
+    int arr1[n], i = 0, sum = 0, even_count = 0, odd_count = 0, even_sum = 0, odd_sum = 0;
+
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter Number %d: ", i + 1);
+        scanf("%d", &arr1[i]);
+        sum += arr1[i];
+
+        if (arr1[i] % 2 == 0)
+        {
+            even_count += 1;
+            even_sum += arr1[i];
+        }
+        else
+        {
+            odd_count += 1;
+            odd_sum += arr1[i];
+        }
+    }
+
+    float avg = (float)sum / n;
+    int max = arr1[0], min = arr1[0], j = 0;
+
+    for (j = 1; j < n; j++)
+    {
+        if (arr1[j] > max)
+        {
+            max = arr1[j];
+        }
+
+        if (arr1[j] < min)
+        {
+            min = arr1[j];
+        }
+    }
+
+    printf("\nSum: %d", sum);
+    printf("\nAverage: %.2f", avg);
+    printf("\nLargest Number: %d", max);
+    printf("\nSmallest Number: %d", min);
+    printf("\nEven Numbers Count: %d", even_count);
+    printf("\nOdd Numbers Count: %d", odd_count);
+    printf("\nSum of Even Numbers: %d", even_sum);
+    printf("\nSum of Odd Numbers: %d", odd_sum);
+
+    return 0;
+}
