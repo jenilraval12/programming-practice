@@ -53,14 +53,6 @@ Output:
 100 was not found in the array.
 Number of Occurrences: 0
 
-Bonus Challenge
-Also determine and display the first and last occurrence of the
-searched number.
-
-Example:
-First Occurrence: Position 2
-Last Occurrence: Position 6
-
 Extra Challenge
 Calculate and display the sum of all occurrences of the searched number.
 
@@ -72,3 +64,55 @@ The program should correctly handle positive numbers, negative numbers,
 zero, duplicate values, and cases where the searched number is not
 present in the array.
 */
+
+#include <stdio.h>
+
+int main()
+{
+    int n, search_num;
+    do
+    {
+        printf("\nEnter Number of Integers: ");
+        scanf("%d", &n);
+        if (n <= 0)
+        {
+            printf("\nPlease Enter Number Greater Than Zero!");
+        }
+    } while (n <= 0);
+
+    int num[n];
+    int occ_count = 0;
+    int occ_sum = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter Number %d: ", i + 1);
+        scanf("%d", &num[i]);
+    }
+
+    printf("Enter Number to Search: ");
+    scanf("%d", &search_num);
+
+    for (int j = 0; j < n; j++)
+    {
+        if (num[j] == search_num)
+        {
+            printf("\nPositions of number %d in array found is: %d", search_num, j + 1);
+            occ_count += 1;
+            occ_sum += search_num;
+        }
+    }
+
+    if (occ_count == 0)
+    {
+        printf("\n%d was not found in array.", search_num);
+    }
+    else
+    {
+        printf("\n%d found in array.", search_num);
+    }
+
+    printf("\nNumber of Occurrences: %d", occ_count);
+    printf("\nSum of Occurrences: %d", occ_sum);
+    return 0;
+}
